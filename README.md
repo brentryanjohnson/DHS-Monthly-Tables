@@ -14,7 +14,7 @@ There are two examples of the source Excel workbooks:
 1. `2024_1108_ohss_immigration-enforcement-and-legal-processes-tables-july-2024.xlsx`
 1. `2024_1206_ohss_immigration-enforcement-and-legal-processes-tables-august-2024.xlsx`
 
-We only pass in one of these files for the source Excel file. The data changes every month, so we receive a new file monthly.
+We only pass in one of these files for the source Excel file. The data changes every month, so we receive a new file monthly. The new file should be added and referenced in the notebook.
 
 ### Output `csv`
 
@@ -36,10 +36,15 @@ I created this notebook with Jupyter Notebook using Python and the pandas librar
 
 ### Caveats
 
-- I am not a software engineer, data scientist, or statistician. I'm a content designer.
+- I am not a software engineer, data scientist, or statistician. I'm a content designer. Skilled python developers will likely notice this code could be improved.
 - You don't need to use the notebook. You can export (download) the python and run the script outside of the notebook (with python).
 
 ### Notebook cells and process
+
+At DHS, you must have Anaconda approved and installed. Once installed:
+
+1. Search for the app `Jupyter Notebook`.
+2. Open the Jupyter Notebook app and navigate the file system to find your download of
 
 1. Review the source Excel file for consistency in sheet and column names.
 2. In this cell in the notebook, replace the file name with the updated source file: `ielp_sheet='2024_1206_ohss_immigration-enforcement-and-legal-processes-tables-august-2024.xlsx'` <br>
