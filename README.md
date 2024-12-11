@@ -1,1 +1,88 @@
 # dhs-monthly-tables
+
+This repository contains a Jupyter Notebook with a Python script that references a source Excel file and reformats it into a flat `csv` file that's used to update the [Monthly Tables charts and tables on the Office of Homeland Security Statistics website](https://ohss.dhs.gov/topics/immigration/immigration-enforcement/immigration-enforcement-and-legal-processes-monthly).
+
+## Notebook
+
+The notebook with the relevant python is titled `monthly merge – CBP SWB Book-outs by Agency.ipynb`
+
+## Files
+
+### Source `xlsx`
+
+There are two examples of the source Excel workbooks:
+1. `2024_1108_ohss_immigration-enforcement-and-legal-processes-tables-july-2024.xlsx`
+1. `2024_1206_ohss_immigration-enforcement-and-legal-processes-tables-august-2024.xlsx`
+
+We only pass in one of these files for the source Excel file. The data changes every month, so we receive a new file monthly.
+
+### Output `csv`
+
+There is one example of the output `csv`:
+1. `ielp-table-202407-t.csv`
+
+The notebook exports a file with a different name (`output.csv`); the included file is the aspirational format that the python code is intended to create from the source excel file.
+
+## How to use the notebook
+
+### Dependencies
+
+I created this notebook with Jupyter Notebook using Python and the pandas library. I used the Anaconda Python distribution on Windows to create this code.
+
+### Assumptions
+
+- We receive a monthly data file in the format expressed in `2024_1206_ohss_immigration-enforcement-and-legal-processes-tables-august-2024.xlsx`.
+- We need to output the data in the format expressed in `ielp-table-202407-t.csv`.
+
+### Caveats
+
+- I am not a software engineer, data scientist, or statistician. I'm a content designer.
+- You don't need to use the notebook. You can export (download) the python and run the script outside of the notebook (with python).
+
+### Notebook cells and process
+
+1. Review the source Excel file for consistency in sheet and column names.
+2. In this cell in the notebook, replace the file name with the updated source file: `ielp_sheet='2024_1206_ohss_immigration-enforcement-and-legal-processes-tables-august-2024.xlsx'` <br>
+> [!NOTE]  
+> Make sure to use quotes around the file name, and make sure that the file is located in the same directory as the notebook file.
+3. Select `Cell`→`Run All` from the top of the notebook.
+4. Look for `output.csv` in the same directory as the notebook file.
+5. Check the data structure of `output.csv` against the included `ielp-table-202407-t.csv`.
+6. Spot check the data of `output.csv` against the relevant data in `2024_1206_ohss_immigration-enforcement-and-legal-processes-tables-august-2024.xlsx`.
+
+#### Spot-check crosswalk
+
+Here's a key to crosswalk (some of) the data fields:
+
+Southwest Border Book-Outs visualization requirements:
+Southwest border book-outs comes from the sheet "CBP SWB Book-outs by Agency".
+Columns T-AA populate the data for the dropdown "At Points of Entry - Office of Field Operations (OFO)"
+- Other outcomes - column AA
+- OFO Paroles - column Z
+- Transfers to HHS - column Y
+- Transfers to ICE - column  X
+- Migrant Protection Protocols - column W
+- T42 expulsions - column V
+- T8 repatriations - column U
+- Total - column T
+
+Columns L-S populate the data for the dropdown "Between Ports of Entry - U.S. Border Patrol (USBP)"
+- Other outcomes - column S
+- USBP Releases - column R
+- Transfers to HHS - column Q
+- Transfers to ICE - column P
+- Migrant Protection Protocols - column O
+- T42 expulsions - column N
+- T8 repatriations - column M
+- Total - column L
+
+Columns C-K populate the data for the dropdown "All Southwest Border Book-outs"
+- Other outcomes - column K
+- OFO Paroles - column J
+- USBP Releases - column I
+- Transfers to HHS - column H
+- Transfers to ICE - column G
+- Migrant Protection Protocols - column F
+- T42 expulsions - column E
+- T8 repatriations - column D
+- Total - column C
