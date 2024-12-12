@@ -44,8 +44,9 @@ I created this notebook with Jupyter Notebook using Python and the pandas librar
 At DHS, you must have Anaconda approved and installed. Once installed:
 
 1. Search for the app `Jupyter Notebook`.
-2. Open the Jupyter Notebook app and navigate the file system to find your download of
+2. Open the Jupyter Notebook app and navigate the file system to find your download
 
+#### Then
 1. Review the source Excel file for consistency in sheet and column names.
 2. In this cell in the notebook, replace the file name with the updated source file: `ielp_sheet='2024_1206_ohss_immigration-enforcement-and-legal-processes-tables-august-2024.xlsx'` <br>
 > [!NOTE]  
