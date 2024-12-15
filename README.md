@@ -60,6 +60,8 @@ At DHS, you must have Anaconda approved and installed. Once installed:
 
 Here's a key to crosswalk (some of) the data fields:
 
+```
+
 Southwest Border Book-Outs visualization requirements:
 Southwest border book-outs comes from the sheet "CBP SWB Book-outs by Agency".
 Columns T-AA populate the data for the dropdown "At Points of Entry - Office of Field Operations (OFO)"
@@ -92,3 +94,10 @@ Columns C-K populate the data for the dropdown "All Southwest Border Book-outs"
 - T42 expulsions - column E
 - T8 repatriations - column D
 - Total - column C
+
+```
+
+## Compare
+
+`compare.ipynb` compares two `csv` files and outputs a third (`difference.csv`) that shows any differences between the two files. I used this to compare the manually created `csv` against that which I'm outputting with the script in the `monthly merge` notebook. Doing so indicated an error in the original version of the notebook, which I have since corrected.
+
