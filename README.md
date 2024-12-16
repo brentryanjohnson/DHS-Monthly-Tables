@@ -18,8 +18,9 @@ We only pass in one of these files for the source Excel file. The data changes e
 
 ### Output `csv`
 
-There is one example of the output `csv`:
+There are two examples of the output `csv`:
 1. `ielp-table-202407-t.csv`
+1. `ielp-table-202408.csv`
 
 The notebook exports a file with a different name (`output.csv`); the included file is the aspirational format that the python code is intended to create from the source excel file.
 
