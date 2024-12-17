@@ -102,3 +102,6 @@ Columns C-K populate the data for the dropdown "All Southwest Border Book-outs"
 
 `compare.ipynb` compares two `csv` files and outputs a third (`difference.csv`) that shows any differences between the two files. I used this to compare the manually created `csv` against that which I'm outputting with the script in the `monthly merge` notebook. Doing so indicated an error in the original version of the notebook, which I have since corrected.
 
+## Iteration
+
+I continue to iterate on the notebooks, so review the commits to make sure you have the most recent version.
